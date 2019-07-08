@@ -445,7 +445,7 @@ class YoutubeCard extends StatelessWidget {
         elevation: 4.0,
         child: InkWell(
           onTap:(){
-            Navigator.of(context).pushNamed( '/YoutubeModule');
+            Navigator.of(context).pushNamed('/YouTubeModulePage');
           },
           child: Padding(
             padding: const EdgeInsets.all(20.0),

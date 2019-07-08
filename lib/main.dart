@@ -4,9 +4,9 @@ import 'Dashboard/DashboardPage.dart';
 import 'Discussion/discussion_topic_list.dart';
 import 'Login/Login.dart';
 
+
 import 'ModuleList/module_list_detail.dart';
 import 'ModuleList/video_player_module.dart';
-import 'ModuleList/youtube_module.dart';
 import 'NotificationList/notification_view.dart';
 import 'OnBoarding/OnBoardingPage.dart';
 import 'SplashScreen/SplashScreenPage.dart';
@@ -28,6 +28,7 @@ void main() =>   runApp(new MaterialApp(
     '/CourseListPage': (BuildContext context) => new CourseListPage(),
     '/ModuleListDetailPage': (BuildContext context) => new ModuleListDetailPage(),
     '/VideoPlayerModulePage ': (BuildContext context) => new VideoPlayerModulePage(),
+
 
 
 
