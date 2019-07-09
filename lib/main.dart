@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'ChangePassword/change_password_page.dart';
 import 'CourseList/course_list.dart';
 import 'Dashboard/DashboardPage.dart';
 import 'Discussion/discussion_topic_list.dart';
+import 'GetStarted/GetStartedStepper.dart';
 import 'Login/Login.dart';
 
 
@@ -22,12 +24,14 @@ void main() =>   runApp(new MaterialApp(
     '/SplashScreenPage': (BuildContext context) => new SplashScreenPage(),
     '/OnboardingMainPage': (BuildContext context) => new OnboardingMainPage(),
     '/LoginPage': (BuildContext context) => new LoginPage(),
+    '/ChangePasswordPage': (BuildContext context) => new ChangePasswordPage(),
     '/DashboardPage': (BuildContext context) => new DashboardPage(),
     '/DiscussionTopicListPage': (BuildContext context) => new DiscussionTopicListPage(),
     '/NotificationPage': (BuildContext context) => new NotificationPage(),
     '/CourseListPage': (BuildContext context) => new CourseListPage(),
     '/ModuleListDetailPage': (BuildContext context) => new ModuleListDetailPage(),
-    '/VideoPlayerModulePage ': (BuildContext context) => new VideoPlayerModulePage(),
+    '/VideoPlayerModulePage': (BuildContext context) => new VideoPlayerModulePage(),
+    '/GetStartedPage': (BuildContext context) => new GetStartedPage(),
 
 
 

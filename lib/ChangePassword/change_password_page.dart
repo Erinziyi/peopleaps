@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_leaps_04/Dashboard/DashboardPage.dart';
-import 'package:wave/wave.dart';
-import 'package:wave/config.dart';
 
-class LoginPage extends StatelessWidget {
+
+
+
+
+class ChangePasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:LoginLayout() ,
-
+      body:ChangePasswordLayout() ,
 
     );
   }
 }
 
-class LoginLayout extends StatelessWidget {
+class ChangePasswordLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,27 +28,7 @@ class LoginLayout extends StatelessWidget {
           children: <Widget>[
             Container(
               height:350,
-              child: RotatedBox(
-                quarterTurns: 2,
-                child: WaveWidget(
-                  config: CustomConfig(
-                    gradients: [
-                      [Colors.white, Colors.blue.shade300],
-                      [Colors.blue, Colors.lightBlue],
-                    ],
-                    durations: [19440, 10800],
-                    heightPercentages: [0.20, 0.25],
-                    blur: MaskFilter.blur(BlurStyle.solid, 10),
-                    gradientBegin: Alignment.bottomLeft,
-                    gradientEnd: Alignment.topRight,
-                  ),
-                  waveAmplitude: 0,
-                  size: Size(
-                    double.infinity,
-                    double.infinity,
-                  ),
-                ),
-              ),
+
             ),
             ListView(
               children: <Widget>[
@@ -60,7 +40,7 @@ class LoginLayout extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Image.asset(
-                        'assets/login_domain_logo.png', width:280.0, height: 165.0,fit: BoxFit.fill,
+                        'assets/change_password.png', width:280.0, height: 165.0,fit: BoxFit.fill,
                       ),
 
 
@@ -70,9 +50,9 @@ class LoginLayout extends StatelessWidget {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40))),
                         child: TextField(
                           decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.perm_identity, color: Colors.black26,),
+                              prefixIcon: Icon(Icons.lock, color: Colors.black26,),
 //                            suffixIcon: Icon(Icons.check_circle, color: Colors.black26,),
-                              hintText: "Portal ID",
+                              hintText: "Old Password",
                               hintStyle: TextStyle(color: Colors.black26),
                               filled: true,
                               fillColor: Colors.white,
@@ -90,9 +70,9 @@ class LoginLayout extends StatelessWidget {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40))),
                         child: TextField(
                           decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.email, color: Colors.black26,),
+                              prefixIcon: Icon(Icons.vpn_key, color: Colors.black26,),
 //                            suffixIcon: Icon(Icons.check_circle, color: Colors.black26,),
-                              hintText: "Comapany Email",
+                              hintText: "New Password",
                               hintStyle: TextStyle(color: Colors.black26),
                               filled: true,
                               fillColor: Colors.white,
@@ -114,7 +94,7 @@ class LoginLayout extends StatelessWidget {
                           autofocus: false,
                           decoration: InputDecoration(
                               prefixIcon: Icon(Icons.lock, color: Colors.black26,),
-                              hintText: "Password",
+                              hintText: "Re-type Password",
                               hintStyle: TextStyle(
                                 color: Colors.black26,
                               ),
@@ -140,64 +120,25 @@ class LoginLayout extends StatelessWidget {
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                     color: Colors.lightBlue,
                     onPressed: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DashboardPage()),
-                      );
+//                      Navigator.push(
+//                        context,
+//                        MaterialPageRoute(builder: (context) => DashboardPage()),
+//                      );
 
                     },
                     elevation: 11,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40.0))),
-                    child: Text("Login", style: TextStyle(
+                    child: Text("Submit", style: TextStyle(
                         color: Colors.white
                     )),
                   ),
                 ),
 
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          FlatButton(child: Text("Forget Password?"), textColor: Colors.indigo, onPressed: (){},)
-                        ],
-                      )
-                    ],
-                  ),
-                ),
 
 
 
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
 
 
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-
-                          Text("Dont have an account?"),
-                          FlatButton(child: Text("Sign up"), textColor: Colors.indigo, onPressed: (){
-//                            Navigator.push(
-//                              context,
-//                              MaterialPageRoute(builder: (context) => QrCodePage ()),
-//                            );
-                          },
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
               ],
             ),
 
@@ -205,6 +146,8 @@ class LoginLayout extends StatelessWidget {
 
         ),
       ),
+
     );
   }
 }
+

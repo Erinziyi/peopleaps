@@ -6,7 +6,6 @@ class DashboardPage extends StatelessWidget {
 
 
 
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -416,6 +415,9 @@ class DashboardPage extends StatelessWidget {
     return list;
   }
 
+
+
+
 // Resourse Reuse
   Column buildButtonColumn(BuildContext context, assetImage,String label, String gotoActivity ){
     return Column(
@@ -489,6 +491,13 @@ class DashboardPage extends StatelessWidget {
       ],
     );
   }
+}
+
+class CustomPopupMenu {
+  CustomPopupMenu({this.title, this.icon});
+
+  String title;
+  IconData icon;
 }
 
 class MenuItem {

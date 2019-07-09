@@ -300,7 +300,7 @@ class VideoCard extends StatelessWidget {
         elevation: 4.0,
         child: InkWell(
           onTap:(){
-            Navigator.of(context).pushNamed('/VideoPlayerModulePage ');
+            Navigator.of(context).pushNamed('/VideoPlayerModulePage');
           },
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -361,11 +361,7 @@ class QuizCard extends StatelessWidget {
   const  QuizCard({Key key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-//    final moduletitles = ['Introduce PEOPLEAPS',
-//      'Whats is PEOPLEAPS?',
-//      'Quiz for PEOPLEAPS',
-//      'Why PEOPLEAPS?'
-//    ];
+
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
@@ -374,7 +370,7 @@ class QuizCard extends StatelessWidget {
         elevation: 4.0,
         child: InkWell(
           onTap:(){
-            Navigator.of(context).pushNamed('/QuizViewModulePage');
+            Navigator.of(context).pushNamed('/GetStartedPage');
           },
           child: Padding(
             padding: const EdgeInsets.all(20.0),

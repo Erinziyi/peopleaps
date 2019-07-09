@@ -7,7 +7,7 @@ import 'package:video_player/video_player.dart';
 
 
 class VideoPlayerModulePage extends StatefulWidget {
-  static String tag = 'videoview-page';
+
   @override
   _VideoPlayerModulePageState createState() => _VideoPlayerModulePageState();
 }
