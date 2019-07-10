@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_leaps_04/Dashboard/DashboardPage.dart';
+import 'package:flutter_leaps_04/ForgetPassword/forget_password_page.dart';
 import 'package:wave/wave.dart';
 import 'package:wave/config.dart';
 
@@ -164,7 +165,13 @@ class LoginLayout extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          FlatButton(child: Text("Forget Password?"), textColor: Colors.indigo, onPressed: (){},)
+                          FlatButton(child: Text("Forget Password?"), textColor: Colors.indigo, onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => ForgetPasswordPage()),
+                            );
+                          },
+                          ),
                         ],
                       )
                     ],

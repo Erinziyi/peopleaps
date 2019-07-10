@@ -1,14 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_leaps_04/ChangePassword/change_password_page.dart';
 
 import 'dashborad_content_card.dart';
+import 'package:flutter/cupertino.dart';
 
-class DashboardPage extends StatelessWidget {
+enum PageEnum {
+  ChangePasswordPage,
+  logOut,
+}
 
 
+
+
+class DashboardPage extends StatefulWidget {
+
+
+  @override
+  _DashboardPageState createState() => _DashboardPageState();
+}
+
+
+
+
+
+class _DashboardPageState extends State<DashboardPage> {
+  _onSelect(PageEnum value){
+    switch(value){
+      case PageEnum.ChangePasswordPage:
+        Navigator.of(context).push(
+            CupertinoPageRoute(builder: (BuildContext context) => ChangePasswordPage()));
+        break;
+      case PageEnum.logOut:
+//        Navigator.of(context).push(CupertinoPageRoute(
+//            builder: (BuildContext context) => SecondPage()));
+        break;
+      default:
+        Navigator.of(context).push(CupertinoPageRoute(
+            builder: (BuildContext context) => ChangePasswordPage()));
+        break;
+
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+
       body: new Container(
         child: new Stack(
           children: <Widget>[
@@ -20,20 +57,23 @@ class DashboardPage extends StatelessWidget {
               padding: new EdgeInsets.only(left:8.0, bottom: 8.0),
               decoration: new BoxDecoration(
                 image: new DecorationImage(image: new AssetImage('assets/login_domain_background.png'),fit: BoxFit.cover,
-                ),
+              ),
               ),
             ),
             bodyScrollviewContent(context),
+
+
           ],
         ),
       ),
+
     );
   }
 
   /*This is header section to handle profile image, email, name and dropdown button*/
   Widget headerSection() {
     return new Container(
-      margin: const EdgeInsets.only(top:30.0),
+      margin: const EdgeInsets.only(top:60.0),
       child: new Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -67,11 +107,12 @@ class DashboardPage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: new EdgeInsets.only(left:50.0),
+            padding: new EdgeInsets.only(left:30.0),
             child: new Column(
               mainAxisAlignment:MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Image.asset('assets/icon_setting_profile.png', height: 50.0,width:50.0 ),
+                _paddingPopup(),
+
               ],
             ),
           ),
@@ -80,7 +121,8 @@ class DashboardPage extends StatelessWidget {
     );
   }
 
-/*This is menu section to handle 6 buttons*/
+
+  /*This is menu section to handle 6 buttons*/
   Widget menuSection(BuildContext context, int width_percent){
 
     //All the menu icon and label set here. After that, generateMenuItems() function will render its menu automatically
@@ -380,6 +422,39 @@ class DashboardPage extends StatelessWidget {
     );
   }
 
+
+
+
+
+  Widget _paddingPopup() => PopupMenuButton<PageEnum>(
+    onSelected: _onSelect,
+    itemBuilder: (context) => [
+      PopupMenuItem<PageEnum>(
+        value: PageEnum.ChangePasswordPage,
+          child: Text("Change Password"),
+      ),
+
+      PopupMenuItem<PageEnum>(
+        value: PageEnum.logOut,
+        child: Text("Log Out"),
+      ),
+
+    ],
+
+   child: new RawMaterialButton(
+     child: new Icon(
+       Icons.settings,
+       color: Colors.blueAccent[700],
+       size:20.0,
+     ),
+     shape: new CircleBorder(),
+     elevation: 20.0,
+     fillColor: Colors.cyan[50],
+
+   ),
+
+  );
+
   //body Dashboard
   Widget bodyScrollviewContent(BuildContext context) {
     return new SingleChildScrollView(
@@ -394,6 +469,7 @@ class DashboardPage extends StatelessWidget {
             trainingSessiondDashboardfSlider(context),
             browseCourseSection(context),
             browseCourseDashboardSlider(context),
+
 
 
 
@@ -415,10 +491,7 @@ class DashboardPage extends StatelessWidget {
     return list;
   }
 
-
-
-
-// Resourse Reuse
+  // Resourse Reuse
   Column buildButtonColumn(BuildContext context, assetImage,String label, String gotoActivity ){
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -493,16 +566,19 @@ class DashboardPage extends StatelessWidget {
   }
 }
 
-class CustomPopupMenu {
-  CustomPopupMenu({this.title, this.icon});
-
-  String title;
-  IconData icon;
-}
-
 class MenuItem {
   String image;
   String label;
   String gotoActivity;
   MenuItem({this.image, this.label, this.gotoActivity });
 }
+
+
+
+
+
+
+
+
+
+

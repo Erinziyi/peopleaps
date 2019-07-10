@@ -8,6 +8,22 @@ class ChangePasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
+        backgroundColor: Colors.blueAccent[400],
+
+        title: Text('Change Password' ,
+          style: TextStyle(
+            fontSize: 16.0,
+            color: Colors.white,
+          ),
+
+        ),
+
+
+      ),
       body:ChangePasswordLayout() ,
 
     );
@@ -40,7 +56,7 @@ class ChangePasswordLayout extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Image.asset(
-                        'assets/change_password.png', width:280.0, height: 165.0,fit: BoxFit.fill,
+                        'assets/change_password.png', width:200.0, height:230.0,fit: BoxFit.fill,
                       ),
 
 

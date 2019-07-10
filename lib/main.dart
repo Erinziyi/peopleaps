@@ -3,6 +3,7 @@ import 'ChangePassword/change_password_page.dart';
 import 'CourseList/course_list.dart';
 import 'Dashboard/DashboardPage.dart';
 import 'Discussion/discussion_topic_list.dart';
+import 'ForgetPassword/forget_password_page.dart';
 import 'GetStarted/GetStartedStepper.dart';
 import 'Login/Login.dart';
 
@@ -24,6 +25,7 @@ void main() =>   runApp(new MaterialApp(
     '/SplashScreenPage': (BuildContext context) => new SplashScreenPage(),
     '/OnboardingMainPage': (BuildContext context) => new OnboardingMainPage(),
     '/LoginPage': (BuildContext context) => new LoginPage(),
+    '/ForgetPasswordPage': (BuildContext context) => new ForgetPasswordPage(),
     '/ChangePasswordPage': (BuildContext context) => new ChangePasswordPage(),
     '/DashboardPage': (BuildContext context) => new DashboardPage(),
     '/DiscussionTopicListPage': (BuildContext context) => new DiscussionTopicListPage(),
