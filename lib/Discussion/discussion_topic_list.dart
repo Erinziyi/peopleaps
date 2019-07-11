@@ -40,7 +40,7 @@ class DiscussionListBodyLayout extends StatelessWidget {
 Widget _discussionListView(BuildContext context) {
 
   final titles = ['MS Exel Advanced',
-    'People 4.0 - Self Materry',
+    'Customer Service Skill',
     'SQL Server',
     'Customer Service Skill',
     'MS Exel Foundation',
@@ -67,14 +67,23 @@ Widget _discussionListView(BuildContext context) {
     itemCount:titles.length,
     itemBuilder: (context, index) {
       return Card(
-        child: ListTile(
-          title: Text(titles[index],style:new TextStyle(
-              color:Colors.black,
-              fontSize: 14.0),
-          ),
-          trailing: Icon(Icons.keyboard_arrow_right),
+        color: Colors.white,
+        elevation: 4.0,
+        child: new InkWell(
+          onTap:(){
+            Navigator.of(context).pushNamed('/DiscussionCreateTopicPage');
+          },
+          child: ListTile(
+            title: Text(titles[index],style:new TextStyle(
+                color:Colors.black,
+                fontSize: 14.0),
+            ),
+            trailing: Icon(Icons.keyboard_arrow_right),
 
+          ),
         ),
+
+
 
       );
     },

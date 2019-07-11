@@ -109,7 +109,7 @@ class _DashboardPageState extends State<DashboardPage> {
           Container(
             padding: new EdgeInsets.only(left:30.0),
             child: new Column(
-              mainAxisAlignment:MainAxisAlignment.spaceAround,
+
               children: <Widget>[
                 _paddingPopup(),
 

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'ChangePassword/change_password_page.dart';
 import 'CourseList/course_list.dart';
+import 'CreateTopic/create_topic_list.dart';
+import 'CreateTopic/text_post.dart';
 import 'Dashboard/DashboardPage.dart';
 import 'Discussion/discussion_topic_list.dart';
 import 'ForgetPassword/forget_password_page.dart';
 import 'GetStarted/GetStartedStepper.dart';
 import 'Login/Login.dart';
-
-
 import 'ModuleList/module_list_detail.dart';
 import 'ModuleList/video_player_module.dart';
 import 'NotificationList/notification_view.dart';
@@ -29,6 +29,8 @@ void main() =>   runApp(new MaterialApp(
     '/ChangePasswordPage': (BuildContext context) => new ChangePasswordPage(),
     '/DashboardPage': (BuildContext context) => new DashboardPage(),
     '/DiscussionTopicListPage': (BuildContext context) => new DiscussionTopicListPage(),
+    '/DiscussionCreateTopicPage': (BuildContext context) => new DiscussionCreateTopicPage(),
+    '/TextPostPage': (BuildContext context) => new TextPostPage(),
     '/NotificationPage': (BuildContext context) => new NotificationPage(),
     '/CourseListPage': (BuildContext context) => new CourseListPage(),
     '/ModuleListDetailPage': (BuildContext context) => new ModuleListDetailPage(),
