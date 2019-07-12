@@ -255,7 +255,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                     height: 20,
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           Row(

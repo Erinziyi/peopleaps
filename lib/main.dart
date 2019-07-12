@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ChangePassword/change_password_page.dart';
 import 'CourseList/course_list.dart';
+import 'CreateTopic/comment_topic.dart';
 import 'CreateTopic/create_topic_list.dart';
 import 'CreateTopic/text_post.dart';
 import 'Dashboard/DashboardPage.dart';
@@ -30,6 +31,7 @@ void main() =>   runApp(new MaterialApp(
     '/DashboardPage': (BuildContext context) => new DashboardPage(),
     '/DiscussionTopicListPage': (BuildContext context) => new DiscussionTopicListPage(),
     '/DiscussionCreateTopicPage': (BuildContext context) => new DiscussionCreateTopicPage(),
+    '/CommentTopicPostPage': (BuildContext context) => new CommentTopicPostPage(),
     '/TextPostPage': (BuildContext context) => new TextPostPage(),
     '/NotificationPage': (BuildContext context) => new NotificationPage(),
     '/CourseListPage': (BuildContext context) => new CourseListPage(),

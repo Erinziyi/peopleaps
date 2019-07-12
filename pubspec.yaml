@@ -97,6 +97,8 @@ flutter:
     - assets/slider_3.png
     - assets/slider_4.png
     - assets/slider_5.png
+    - assets/icon_check_in.png
+    - assets/icon_gallery.png
 
   fonts:
     - family: Roboto

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_leaps_04/CreateTopic/text_post.dart';
 
+import 'comment_topic.dart';
+
 class DiscussionCreateTopicPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class DiscussionCreateTopicPage extends StatelessWidget {
         ),
       ),
       body: new Center(
-
+        child: CreateTopicBodyLayout(),
 
       ),
 
@@ -40,11 +42,63 @@ class DiscussionCreateTopicPage extends StatelessWidget {
       ),
     );
   }
+}
+
+
+class CreateTopicBodyLayout extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return _createTopicHeader(context);
+ }
+}
+
+Widget _createTopicHeader(BuildContext context){
+  return ListView(
+    children: ListTile.divideTiles( //          <-- ListTile.divideTiles
+        context: context,
+        tiles: [
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage: AssetImage('assets/profile_pic.png'),
+            ),
+            title: FlatButton(
+              child: Text("Whats is your mind?"), textColor: Colors.grey, onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CommentTopicPostPage()),
+              );
+            },
+            ),
+          ),
+
+          ListTile(
+            leading: Image.asset('assets/icon_gallery.png',height: 40.0,),
+            title:VerticalDivider(),
+            trailing:Image.asset('assets/icon_check_in.png',height: 40.0,),
+              contentPadding: EdgeInsets.fromLTRB(100.0,5.0,100.0, 5.0),
+
+          ),
 
 
 
+
+        ]
+    ).toList(),
+
+
+
+  );
 
 }
+
+class VerticalDivider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => RotatedBox(
+    quarterTurns: 1,
+    child: Divider(),
+  );
+}
+
 
 
 
