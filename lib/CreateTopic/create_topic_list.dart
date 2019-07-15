@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_leaps_04/CreateTopic/text_post.dart';
 
-import 'comment_topic.dart';
+import 'create_topic.dart';
 
 class DiscussionCreateTopicPage extends StatelessWidget {
   @override
@@ -65,7 +65,7 @@ Widget _createTopicHeader(BuildContext context){
               child: Text("Whats is your mind?"), textColor: Colors.grey, onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CommentTopicPostPage()),
+                MaterialPageRoute(builder: (context) => CreateTopicPostPage()),
               );
             },
             ),
@@ -91,15 +91,15 @@ Widget _createTopicHeader(BuildContext context){
 
 }
 
-class VerticalDivider extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) => RotatedBox(
-    quarterTurns: 1,
-    child: Divider(),
-  );
-}
-
-
+//class VerticalDivider extends StatelessWidget {
+//  @override
+//  Widget build(BuildContext context) => RotatedBox(
+//    quarterTurns: 1,
+//    child: Divider(),
+//  );
+//}
+//
+//
 
 
 
