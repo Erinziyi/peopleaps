@@ -65,6 +65,7 @@ class CreateTopicPostPage extends StatelessWidget {
 
       decoration: BoxDecoration(
         color: Colors.white,
+
           border: Border.all(
             color: Colors.grey,
             width: 1, //
@@ -102,7 +103,7 @@ class CreateTopicPostPage extends StatelessWidget {
             title: Text('Photo/Video'),
           ),
           ListTile(
-
+            leading: Image.asset('assets/icon_camera.png',height: 35.0,),
             title: Text('Camera'),
           ),
           ListTile(
@@ -177,8 +178,9 @@ class CreateTopicPostPage extends StatelessWidget {
       child: new Column(
         children: <Widget>[
            new TextField(
-            decoration: InputDecoration(
-                hintText: "Whats on your mind?",
+          maxLines: 20,
+             decoration: InputDecoration(
+                 hintText: "Whats on your mind?",
                 hintStyle: TextStyle(color: Colors.black26),
                 filled: true,
                 fillColor: Colors.white,
