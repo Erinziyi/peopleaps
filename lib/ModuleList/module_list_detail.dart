@@ -36,13 +36,34 @@ class ModuleListDetailPage extends StatelessWidget {
         panel:_floatingPanel(),
         collapsed: _floatingCollapsed(),
 
-        body:Center(
-          child: Text("This is the Widget behind the sliding panel"),
+        body:Container(
+         child: new Column(
+           children: <Widget>[
+             _summaryTitle(),
+
+           ],
+         ),
         ),
       ),
 
     );
   }
+
+  Widget _summaryTitle(){
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      child: new Text('Goals Essential - Self Mastery & Personal Effectiveness ',maxLines: 4,
+      style:new TextStyle(
+        fontSize:16.0,
+        fontWeight: FontWeight.bold,
+      ),
+      ),
+
+    );
+  }
+
+  
+
 
   Widget _floatingCollapsed(){
     return Container(
@@ -129,6 +150,21 @@ class ModuleListDetailPage extends StatelessWidget {
     );
   }
 }
+
+class DescriptionTextWidget extends StatefulWidget {
+  @override
+  _DescriptionTextWidgetState createState() => _DescriptionTextWidgetState();
+}
+
+class _DescriptionTextWidgetState extends State<DescriptionTextWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+
+    );
+  }
+}
+
 
 // Article
 class ArticleViewCard extends StatelessWidget {

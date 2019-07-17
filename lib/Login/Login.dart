@@ -3,10 +3,12 @@ import 'package:flutter_leaps_04/Dashboard/DashboardPage.dart';
 import 'package:flutter_leaps_04/ForgetPassword/forget_password_page.dart';
 import 'package:wave/wave.dart';
 import 'package:wave/config.dart';
+import 'package:bloc/bloc.dart';
 
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body:LoginLayout() ,
 
@@ -133,7 +135,7 @@ class LoginLayout extends StatelessWidget {
                     ],
                   ),
                 ),
-//              SizedBox(height: 30,),
+
                 Container(
                   width: double.infinity,
                   padding: EdgeInsets.fromLTRB(70.0,50.0,70.0,10.0),
