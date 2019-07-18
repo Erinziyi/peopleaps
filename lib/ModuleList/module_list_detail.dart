@@ -40,6 +40,7 @@ class ModuleListDetailPage extends StatelessWidget {
          child: new Column(
            children: <Widget>[
              _summaryTitle(),
+             DescriptionTextWidget(),
 
            ],
          ),
@@ -152,14 +153,46 @@ class ModuleListDetailPage extends StatelessWidget {
 }
 
 class DescriptionTextWidget extends StatefulWidget {
+  final Widget child;
+
+  const DescriptionTextWidget({Key key, this.child}) : super(key: key);
   @override
   _DescriptionTextWidgetState createState() => _DescriptionTextWidgetState();
 }
 
 class _DescriptionTextWidgetState extends State<DescriptionTextWidget> {
+
+  String descText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+  bool descTextShowFlag = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(16.0),
+      child:new Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            descText,
+            maxLines:  descTextShowFlag ?16 : 4,textAlign: TextAlign.justify,
+          ),
+          InkWell(
+            onTap: (){
+              setState(() {
+                descTextShowFlag = !descTextShowFlag;
+              });
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                descTextShowFlag ? Text("ReadLess",style: TextStyle(color: Colors.blue),) :  Text("ReadMore",style: TextStyle(color: Colors.grey))
+              ],
+            ),
+
+          ),
+        ],
+
+      )
 
     );
   }
@@ -178,7 +211,7 @@ class ArticleViewCard extends StatelessWidget {
         elevation: 4.0,
         child: InkWell(
           onTap:(){
-            Navigator.of(context).pushNamed('/ArticleViewModulePage');
+            Navigator.of(context).pushNamed('/ArticlePage');
           },
           child: Padding(
             padding: const EdgeInsets.all(20.0),

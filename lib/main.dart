@@ -9,6 +9,7 @@ import 'Discussion/discussion_topic_list.dart';
 import 'ForgetPassword/forget_password_page.dart';
 import 'GetStarted/GetStartedStepper.dart';
 import 'Login/Login.dart';
+import 'ModuleList/article_module.dart';
 import 'ModuleList/module_list_detail.dart';
 import 'ModuleList/video_player_module.dart';
 import 'NotificationList/notification_view.dart';
@@ -36,6 +37,7 @@ void main() =>   runApp(new MaterialApp(
     '/NotificationPage': (BuildContext context) => new NotificationPage(),
     '/CourseListPage': (BuildContext context) => new CourseListPage(),
     '/ModuleListDetailPage': (BuildContext context) => new ModuleListDetailPage(),
+    '/ArticlePage': (BuildContext context) => new ArticlePage(),
     '/VideoPlayerModulePage': (BuildContext context) => new VideoPlayerModulePage(),
     '/GetStartedPage': (BuildContext context) => new GetStartedPage(),
 
