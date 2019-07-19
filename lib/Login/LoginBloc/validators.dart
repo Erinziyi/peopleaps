@@ -1,20 +1,49 @@
 import 'dart:async';
+import 'package:fluttertoast/fluttertoast.dart';
 
-const String _pEmailRule = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
 
-class CompanyEmailValidators{
-  final StreamTransformer<String,String>validateEmail =
-      StreamTransformer<String,String>.fromHandlers(handleData: (email, sink){
-  final RegExp emailExp = new RegExp(_pEmailRule);
 
-  if (!emailExp.hasMatch(email) || email.isEmpty){
-    sink.addError('Entre a valid email');
-  } else {
-    sink.add(email);
+
+class Validator {
+
+  Validator._();
+
+
+
+  static bool isValidPassword(String password) {
+
+    return password.length >= 6;
+
   }
-      });
+
+
+
+  static bool isValidEmail(String email) {
+
+    final _emailRegExpString = r'[a-zA-Z0-9\+\.\_\%\-\+]{1,256}\@[a-zA-Z0-9]'
+
+        r'[a-zA-Z0-9\-]{0,64}(\.[a-zA-Z0-9][a-zA-Z0-9\-]{0,25})+';
+
+    return RegExp(_emailRegExpString, caseSensitive: false).hasMatch(email);
+
+  }
+
+
+
+
+
+  static bool isValidUserName(String userName) {
+
+    return userName.length >= 3;
+
+  }
 
 }
+
+
+
+
+
 
 
 
