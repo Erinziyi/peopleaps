@@ -46,7 +46,6 @@ dependencies:
   shared_preferences: any
   equatable: ^0.3.0
   meta: any
-  fluttertoast: ^2.1.4
 
 
 
